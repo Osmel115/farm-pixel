@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Pixel - Play to Earn</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="balance-container">
+                <span class="balance-label">Balance</span>
+                <div class="balance">
+                    <span class="ton-icon">◆</span>
+                    <span id="balanceAmount">0.0000</span>
+                    <span class="ton-symbol"> TON</span>
+                </div>
+            </div>
+            <button class="settings-btn" id="settingsBtn">⚙️</button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Harvest Counter -->
+            <div class="harvest-counter">
+                <span id="harvestCount">Cosechas restantes: 10/10</span>
+            </div>
+
+            <!-- Farm Grid -->
+            <section class="farm-section">
+                <div class="farm-grid" id="farmGrid">
+                    <!-- Parcelas se generarán aquí -->
+                </div>
+            </section>
+
+            <!-- Magic Shop -->
+            <section class="shop-section">
+                <h2>🪴 Tienda Mágica</h2>
+                <div class="seeds-grid" id="seedsGrid">
+                    <!-- Semillas se mostrarán aquí -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Guide Elf Modal -->
+        <div class="modal" id="guideModal">
+            <div class="modal-content guide-modal">
+                <button class="close-btn" id="closeGuideBtn">✕</button>
+                <div class="guide-header">
+                    <div class="elf-avatar">🧝</div>
+                    <h3>Guía Elfo</h3>
+                </div>
+                <div id="guideContent" class="guide-content">
+                    <!-- Contenido del guía -->
+                </div>
+                <button class="btn btn-primary" id="nextGuideBtn">Siguiente</button>
+            </div>
+        </div>
+
+        <!-- Parcel Detail Modal -->
+        <div class="modal" id="parcelModal">
+            <div class="modal-content parcel-modal">
+                <button class="close-btn" id="closeParcelBtn">✕</button>
+                <div id="parcelDetail">
+                    <!-- Detalles de la parcela -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications -->
+        <div id="notification" class="notification"></div>
+    </div>
+
+    <script src="ton-connector.js"></script>
+    <script src="game-data.js"></script>
+    <script src="game-logic.js"></script>
+    <script src="ui.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
