@@ -60,7 +60,6 @@ async function onPlotClick(plotIndex, plotData) {
             return;
         }
 
-        // Enviar petición de cosecha al servidor
         try {
             const res = await fetch('/api/plot/harvest', {
                 method: 'POST',
@@ -77,7 +76,6 @@ async function onPlotClick(plotIndex, plotData) {
                 document.getElementById('user-balance').innerText = parseFloat(userData.balance).toFixed(4);
                 document.getElementById('user-harvests').innerText = `${userData.daily_harvests_left}/10`;
                 
-                // Actualizar la parcela en local
                 const idx = userPlots.findIndex(p => p.plot_index === plotIndex);
                 if (idx !== -1) userPlots[idx] = data.plot;
 
@@ -126,8 +124,8 @@ function closeElf() {
     if (elf) elf.style.display = 'none';
 }
 
-// Actualizar contadores en pantalla cada segundo
 setInterval(renderPlots, 1000);
 
 initGame();
+            
                     
