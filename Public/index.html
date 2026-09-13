@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Farm Pixel</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Encabezado con Balance y Cosechas -->
+    <header class="hud">
+        <div class="stat-box">
+            <span>💎 TON:</span>
+            <strong id="user-balance">0.0000</strong>
+        </div>
+        <div class="stat-box">
+            <span>🌾 Cosechas:</span>
+            <strong id="user-harvests">10/10</strong>
+        </div>
+    </header>
+
+    <!-- Modal del Guía Elfo -->
+    <div id="elf-guide" class="elf-box">
+        <div class="elf-avatar">🧝‍♂️</div>
+        <div class="elf-text">
+            <p><strong>Elfo Guía:</strong> ¡Bienvenido a Farm Pixel! Te he regalado tu primer Brote de Luz en la Parcela 1. ¡Cosecha para ganar tu primer TON!</p>
+            <button onclick="closeElf()">¡Entendido!</button>
+        </div>
+    </div>
+
+    <!-- Granja con las 10 Parcelas -->
+    <main class="farm-container">
+        <h2>🏕️ Tu Granja Mágica</h2>
+        <div class="grid-plots" id="plots-grid">
+            <!-- Se generan dinámicamente con JS -->
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
+  
